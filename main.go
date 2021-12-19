@@ -5,7 +5,7 @@ import (
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 
-	auth "./auth"
+	auth "github.com/ASPeXP/go-apidemo/auth"
 
 	"github.com/ASPeXP/go-apidemo/todo"
 )
