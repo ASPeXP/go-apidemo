@@ -4,18 +4,15 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
-
-	
 )
 
 type Todo struct {
-	Title string `json:"text"`
+	Title string `json:"text" binding:"required"`
 	gorm.Model
 }
 
-func (Todo) Tablename() string {
+func (Todo) TableName() string {
 	return "todos"
 }
 
